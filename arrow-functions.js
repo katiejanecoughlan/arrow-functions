@@ -14,7 +14,7 @@
 // Arrow Function With Parameters
 const addTwoNumbers = (a, b) => {
     // Code block 
-    return a+ b;
+    return a + b;
  }
  let sum = addTwoNumbers(3, 5);
  console.log(sum)
@@ -39,3 +39,19 @@ const returnMultipleLines = () => (
     </p>`
 )
 console.log(returnMultipleLines());
+
+// Example question answer
+const averagePoints = (arr, subject) => {
+    let allPoints = 0;
+    let sum = 0;
+    for(let itm of arr) {
+      if(subject in itm.results) {
+        allPoints += itm.results[subject];
+        sum+=1;
+      }
+    }
+    return allPoints / sum;
+};
+
+let averageMarks = averagePoints(students, 'english');
+console.log(averageMarks);
